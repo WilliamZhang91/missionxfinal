@@ -1,0 +1,24 @@
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.center {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.center1 {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    font-size: 13px;
+    margin: 2vh 0 5vh 0;
+}
+
+.span {
+    margin: 0 10px;
+}

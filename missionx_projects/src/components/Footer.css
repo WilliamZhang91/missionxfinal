@@ -1,0 +1,20 @@
+.layout {
+    background-color:#b9e4f9;
+    display: flex;
+    width: 100vw;
+    
+    justify-content: center;
+    padding: 70px 0 90px 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+}
+
+.padding {
+    padding: 0 2vw;
+}
+
+.padding1 {
+    padding: 0 2vw;
+    width: 20%;
+    overflow: hidden;
+}
