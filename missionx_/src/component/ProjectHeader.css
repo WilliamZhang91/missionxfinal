@@ -1,0 +1,55 @@
+.headerProject {
+    width: 100vw;
+    background-color: #00b9ff;
+    display: flex;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logo {
+    color: white;
+    flex: 33%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex: 33%;
+    color: white;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    flex: 33%;
+    width: 30px;
+    height: 12px;
+    color: white;
+}
+
+.left {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: gray;
+}
+
+.underline {
+    border-bottom: 1px solid gray;
+}
+
+.flagNz {
+    padding: 0 3px;
+}
+
+.flagMaori {
+    padding: 0 0 0 3px;
+}
+
+.lang {
+    font-size: 10px;
+    display: flex;
+    align-content: flex-start;
+}
