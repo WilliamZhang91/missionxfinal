@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Tab from './component/Tab'
 import ProjectBody from './component/ProjectBody'
+import Home from "./component/Home";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+          <Route exact path="/" component={Home} />
           <Route exact path="/teacherspage">
             <Tab />
           </Route >
