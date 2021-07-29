@@ -49,8 +49,6 @@
 .status {
     margin: auto;
     display: flex;
-    flex-direction: row;
-    align-content: space-around
 }
 
 .user {

@@ -1,6 +1,5 @@
 .flex {
     display: flex;
-
     width: 100vw;
     justify-content: center;
 }
@@ -15,7 +14,7 @@
     font-size: 12px;
     color: gray;
     width: 20vw;
-    padding: 100px 0;
+    margin: 24.5vh 0 0 0;
    /* background-color: aliceblue; */
 }
 
@@ -38,9 +37,20 @@
     justify-content: end;
 }
 
-.align {
+.topFilter {
+    margin: 8vh 0 0 0;
+}
+
+.alignFilter {
     display: flex;
     justify-content: flex-start;
+    margin: 0 0 4vh 0;
+}
+
+.borderUnderline {
+    border-bottom-style: solid;
+    padding-bottom: 3px;
+    width: 10vw;
 }
 
 .buttons {
@@ -113,7 +123,8 @@
     padding: 50px 0;
 }
 
-.image {
+.projectImage {
+    display: flex;
     height: 25vh;
     width: 35vh;
 }
@@ -129,7 +140,7 @@
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
-    font-size: 13px;
+    font-size: 19px;
 }
 
 .center1 {
@@ -154,6 +165,7 @@
     justify-Content: end;
     background-color: #d49c29;
     padding: 1vh 2vw;
+    border: none;
     border-radius: 5px;
     color: white;
     font-weight: bold;

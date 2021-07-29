@@ -44,12 +44,7 @@ export default function ProjectBody() {
     /*const allFilter = [...freeFilter, ...subFilter]*/
 
     // Activity type 
-    const [activityTier, setActivityTier] = useState({
-        animation: false,
-        game: false,
-        chatbot: false,
-        'augmented reality': false,
-    })
+    const [activityTier, setActivityTier] = useState()
     const [isAnimationChecked, setIsAnimationChecked] = useState(false);
     const [isGameChecked, setIsGameChecked] = useState(false);
     const [isChatbotChecked, setIsChatbotChecked] = useState(false);
@@ -60,6 +55,7 @@ export default function ProjectBody() {
     const augmentedRealityFilter = projects.filter(item => item.activty_type === 'augmented reality');
     const beginner = projects.filter(item => item.course === 'beginner')
     const intermediate = projects.filter(item => item.course === 'intermediate')
+    const advanced = projects.filter(item => item.course === 'advanced')
     const gameAndFree = animationFilter.concat(gameFilter);
     const animationFreeFilter = projects1
 
@@ -81,6 +77,14 @@ export default function ProjectBody() {
         setCourseDifficulty('beginner')
     }
 
+    const toggleIntermediate = (e) => {
+        setCourseDifficulty('intermediate')
+    }
+
+    const toggleAdvanced = (e) => {
+        setCourseDifficulty('advanced')
+    }
+
     let renderedProjects = [];
 
     if (subscriptionTier === 'free') {
@@ -97,9 +101,13 @@ export default function ProjectBody() {
         renderedProjects = augmentedRealityFilter
     } else if (activityTier === 'game' && activityTier === 'animation') {
         renderedProjects = gameAndFree
-    } else if (courseDifficulty === 'beginner')
+    } else if (courseDifficulty === 'beginner') {
         renderedProjects = beginner
-    else {
+    } else if (courseDifficulty === 'intermediate') {
+    renderedProjects = intermediate
+    } else if (courseDifficulty === 'advanced') {
+        renderedProjects = advanced
+    }else {
         renderedProjects = allFilter;
     }
 
@@ -108,15 +116,23 @@ export default function ProjectBody() {
         if (isFreeChecked === true && isSubChecked === true) { // when free and subscription checkbox are checked  
             setIsFreeChecked(!isFreeChecked) // onClick unchecks free checkbox
             setSubscriptionTier('subscription') // leaving only subscription filter remaining
+            setCourseDifficulty('')
+            toggleButton(0)
         } else if (isFreeChecked === true && isSubChecked === false) { // when sub is unchecked and free is checked
             setIsFreeChecked(false) // onclick unchecks free
             setSubscriptionTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         } else if (isFreeChecked === false && isSubChecked === true) {
             setIsFreeChecked(true)
             setSubscriptionTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         } else {
             setIsFreeChecked(!isFreeChecked)
             setSubscriptionTier("free")
+            setCourseDifficulty('')
+            toggleButton(0)
         }
     }
 
@@ -124,15 +140,23 @@ export default function ProjectBody() {
         if (isSubChecked === true && isFreeChecked === true) { /* if subscription checkbox is checked */
             setSubscriptionTier("free") /* set filter to none when unchecked */
             setIsSubChecked(!isSubChecked) /* set checkbox ot unchecked when clicked */
+            setCourseDifficulty('')
+            toggleButton(0)
         } else if (isSubChecked === true && isFreeChecked === false) { // when free is unchecked and sub is checked
             setIsSubChecked(false) // onclick unchecks sub
             setSubscriptionTier(allFilter) // shows both free and sub 
+            setCourseDifficulty('')
+            toggleButton(0)
         } else if (isSubChecked === false && isFreeChecked === true) {
             setIsSubChecked(true)
             setSubscriptionTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         } else {
             setSubscriptionTier('subscription')
             setIsSubChecked(true)
+            setCourseDifficulty('')
+            toggleButton(0)
         }
     }
 
@@ -141,9 +165,13 @@ export default function ProjectBody() {
         if (isAnimationChecked === false) {
             setIsAnimationChecked(true)
             setActivityTier('animation')
+            setCourseDifficulty('')
+            toggleButton(0)
         } else {
             setIsAnimationChecked(false)
             setActivityTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         }
     }
 
@@ -151,19 +179,29 @@ export default function ProjectBody() {
         if (isGameChecked === false) {
             setIsGameChecked(true)
             setActivityTier('game')
+            setCourseDifficulty('')
+            toggleButton(0)
         } else if (isGameChecked === true && isAnimationChecked === false) {
             setIsGameChecked(false)
             setActivityTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         }
         else if (isGameChecked === true && isAnimationChecked === true) {
             setIsGameChecked(false)
             setActivityTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         } else if (isGameChecked === false && isAnimationChecked === true) {
             setIsGameChecked(true)
             setActivityTier(gameAndFree)
+            setCourseDifficulty('')
+            toggleButton(0)
         } else {
             setIsGameChecked(false)
             setActivityTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         }
     }
 
@@ -171,9 +209,13 @@ export default function ProjectBody() {
         if (isChatbotChecked === false) {
             setIsChatbotChecked(true)
             setActivityTier('chatbot')
+            setCourseDifficulty('')
+            toggleButton(0)
         } else {
             setIsChatbotChecked(false)
             setActivityTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         }
     }
 
@@ -181,37 +223,16 @@ export default function ProjectBody() {
         if (isAugmentedRealityChecked === false) {
             setIsAugmentedRealityChecked(true)
             setActivityTier('augmented reality')
+            setCourseDifficulty('')
+            toggleButton(0)
         } else {
             setIsAugmentedRealityChecked(false)
             setActivityTier(allFilter)
+            setCourseDifficulty('')
+            toggleButton(0)
         }
     }
 
-
-    /*const handleActivityAnimation = (e) => {
-        if (isAnimationChecked === false) {
-            setIsAnimationChecked(true)
-            setActivityTier('animation')
-        } else if (isAnimationChecked === false && isFreeChecked === true) {
-            setIsAnimationChecked(true)
-            setActivityTier(projects1)
-        } else {
-            setIsAnimationChecked(false)
-            setActivityTier(allFilter)
-        }
-    } */
-
-
-    /*if (activityTier === 'Animation') {
-        renderedActivityProjects = animationFilter;
-        console.log(renderedProjects)
-    } else if (activityTier === 'Game') {
-        renderedActivityProjects = gameFilter
-    } else if (activityTier === 'Chatbot') {
-        renderedActivityProjects = chatbotFilter
-    } else {
-        renderedActivityProjects = augmentedRealityFilter
-    }*/
 
     const toggleScroll = () => {
         window.scrollTo({
@@ -227,9 +248,9 @@ export default function ProjectBody() {
             <div className="flex">
                 <div className="width">
                     <div className="left">
-                        <div className="align">
+                        <div className="alignFilter">
                             <form>
-                                <p>SUBSCRIPTION</p>
+                                <p className='borderUnderline'>SUBSCRIPTION</p>
                                 <input value='free' type='checkbox' checked={isFreeChecked} onClick={handleSubscriptionFilterFree}></input>
                                 <label for="free" >Free</label><br />
                                 <input value='sub' checked={isSubChecked} onClick={handleSubscriptionFilterSub} type='checkbox'></input>
@@ -238,9 +259,9 @@ export default function ProjectBody() {
                         </div>
 
 
-                        <div className="align">
+                        <div className="alignFilter">
                             <form>
-                                <p>ACTIVITY TYPE</p>
+                                <p className='borderUnderline'>ACTIVITY TYPE</p>
                                 <input type='checkbox' checked={isAnimationChecked} onClick={handleActivityAnimation}></input>
                                 <label for="animatation">Animation</label><br />
                                 <input type='checkbox' checked={isGameChecked} onClick={handleGame}></input>
@@ -248,14 +269,14 @@ export default function ProjectBody() {
                                 <input type='checkbox' checked={isChatbotChecked} onClick={handleChatbot}></input>
                                 <label for="chatbot">Chatbot</label><br />
                                 <input type='checkbox' checked={isAugmentedRealityChecked} onClick={handleAugmentedReality}></input>
-                                <label for="augmented reality">Augmented reality</label>
+                                <label for="augmented reality">Augmented Reality</label>
                             </form>
                         </div>
 
 
-                        <div className="align">
+                        <div className="alignFilter">
                             <form>
-                                <p className='align'>YEAR LEVEL</p>
+                                <p className='borderUnderline'>YEAR LEVEL</p>
                                 <input type='checkbox'></input>
                                 <label for="1-4">1 - 4</label><br />
                                 <input type='checkbox'></input>
@@ -268,9 +289,9 @@ export default function ProjectBody() {
                         </div>
 
 
-                        <div className="align">
+                        <div className="alignFilter">
                             <form>
-                                <p>SUBJECT MATTER</p>
+                                <p className='borderUnderline'>SUBJECT MATTER</p>
                                 <input type='checkbox'></input>
                                 <label for="computer science">Computer science</label><br />
                                 <input type='checkbox'></input>
@@ -280,7 +301,9 @@ export default function ProjectBody() {
                                 <input type='checkbox'></input>
                                 <label for="art">Art</label><br />
                                 <input type='checkbox'></input>
-                                <label for="music">Music</label>
+                                <label for="music">Music</label><br />
+                                <input type='checkbox'></input>
+                                <label for="language">Language</label>
                             </form>
                         </div>
                     </div>
@@ -292,12 +315,12 @@ export default function ProjectBody() {
                             <p>Welcome to the project Library. You can use the filters on the right to help you search for specific projects.</p>
                         </div>
 
-                        <div>
+                        <div className="topFilter">
                             <div className="buttons">
                                 <span className="buttons1">
                                     <button onClick={() => { toggleButton(1); toggleBeginner() }} className={highlight === 1 ? "highlight individualButton1" : "individualButton1"}>BEGINNER</button>
-                                    <button onClick={() => toggleButton(2)} className={highlight === 2 ? "highlight individualButtonMid" : "individualButtonMid"}>INTERMEDIATE</button>
-                                    <button onClick={() => toggleButton(3)} className={highlight === 3 ? "highlight individualButton2" : "individualButton2"}>ADVANCED</button>
+                                    <button onClick={() => { toggleButton(2); toggleIntermediate() }} className={highlight === 2 ? "highlight individualButtonMid" : "individualButtonMid"}>INTERMEDIATE</button>
+                                    <button onClick={() => { toggleButton(3); toggleAdvanced() }} className={highlight === 3 ? "highlight individualButton2" : "individualButton2"}>ADVANCED</button>
                                 </span>
 
                                 <span className="buttons2">
@@ -311,10 +334,10 @@ export default function ProjectBody() {
                                 {renderedProjects.map(project => (
 
                                     <div key={project.project_id}>
-                                        <img src={Project01} className="image" />
+                                        <img src={project.project_pic} className="projectImage" />
                                         <h1 className="center">{project.project_name}</h1>
                                         <div className="center1">
-                                            <span>{project.activity_type}</span><span className="span">|</span><span>{project.course}</span>
+                                            <span>{project.course.toUpperCase()}</span><span className="span">|</span><span>{project.activity_type[0].toUpperCase() + project.activity_type.slice(1).toLowerCase()}</span>
                                         </div>
                                     </div>
 
