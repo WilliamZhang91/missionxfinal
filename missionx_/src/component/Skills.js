@@ -1,6 +1,9 @@
 import React from "react";
 import "./Home.css";
 import Container from "@material-ui/core/Container";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from "@material-ui/core/Button";
 
 function Skills() {
   return (
@@ -72,6 +75,39 @@ function Skills() {
             </div>
           </div>
         </div>
+        {/* Buttons */}
+        <div style={{textAlign: "center", paddingTop: "30px"}}>
+        <h2 style={{paddingBottom: "15px"}}>How our programmes help teachers and schools</h2>
+        <Row>
+          <Col>
+          <Button >
+            <img style={{width: "90%"}}
+              src="Mission X Images\Home Page\path1.png"
+              alt="learn more"
+            />
+          </Button>
+            <Button >
+            <img style={{width: "90%"}}
+              src="Mission X Images\Home Page\path2.png"
+              alt="learn more"
+            />
+          </Button>
+          <Button >
+            <img style={{width: "90%"}}
+              src="Mission X Images\Home Page\path3.png"
+              alt="learn more"
+            />
+          </Button>
+          <Button >
+            <img style={{width: "90%"}}
+              src="Mission X Images\Home Page\path4.png"
+              alt="learn more"
+            />
+          </Button>
+          </Col>
+        </Row>
+        </div>
+
       </Container>
     </div>
   );
