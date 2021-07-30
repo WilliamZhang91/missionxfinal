@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from 'react-material-ui-carousel'
 
-
+// This is the carousel that goes into the offer section of the Home page
 function Example(props)
 {
     var items = [

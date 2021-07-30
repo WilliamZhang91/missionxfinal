@@ -59,6 +59,8 @@ function LoginDialog(props) {
   );
 }
 
+// A bit of code here with relating to react states for the pop up dialog for log in and register
+
 const Navbar = () => {
   const [dialogOpen, setOpen] = React.useState(false);
   const [selectedValue, setSelectedValue] = React.useState("");

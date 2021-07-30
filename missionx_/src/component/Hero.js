@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from "@material-ui/core/Button";
-import { Grid} from "@material-ui/core";
+
 
 var textContainer = {
   div: {
@@ -23,10 +23,6 @@ function Hero() {
     <Col style={{background: "#f3efef", paddingRight: "0", }} >
     <div style={textContainer.div}>
     <h1 className="heroTitle">Prepare young minds for a better <span style={{color: "#57BAEC"}}>future.</span></h1>
-        {/* <p>
-          Let us help you advance students in Digital Technologies and other
-          learning areas with our project based learning programme.
-        </p> */}
         <p  className="section2-p">
           Let us help you advance students in Digital Technologies and other
           learning areas with our project based learning programme.

@@ -9,6 +9,7 @@ function Section3() {
     <Container style={{padding: "50px"}} maxWidth="lg">
     <h2>Enhance key competencies</h2>
     <p>The programme enhances capabilities of students</p>
+    {/* static picture of the content that is meant to go here. Couldn't find the different secions in level up works. */}
     <img src="Mission X Images\Home Page\THINKINGIn particular the programme focused on problem solving, design thinking and comput.png" style={{width: "100%"}}/>
 
     </Container>

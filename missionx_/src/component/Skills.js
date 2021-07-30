@@ -5,6 +5,8 @@ import Container from "@material-ui/core/Container";
 function Skills() {
   return (
     <div>
+    {/* Theoretically this is responsive code but might not work as expected since merged with other code on github */}
+    {/* Update this should was resolved with using % for the skill caption */}
       <Container style={{ padding: "50px" }} maxWidth="lg">
         <h2 style={{textAlign:"center"}}>
           Teaching kids programming and digital skills is MORE than just writing

@@ -1,3 +1,8 @@
+/* I only used one css styling page for all of the home and login/register page 
+because I reused bits of code from different sections. Also this meant i didn't 
+have to clutter up the components page with lots of different css files. I've 
+labelled the styles applied to different pages using comments.*/
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -107,12 +112,13 @@ h3 {
   top: 10%;
   left: 33%;
 }
+/* resolved text not resizing using % instead of px */
 .skillsCaption {
   position: absolute;
   top: 60%;
   left: 18%;
   right: 18%;
-  font-size: 20px;
+  font-size: 70%;    
   font-weight: bolder;
   text-shadow: -0.5px 0.5px 0 #000;
   color: white;
@@ -145,7 +151,7 @@ h3 {
   display: flex;
   flex-direction: column;
 }
-
+/* Login Page to hide/reveal login and signup */
 .display-none {
   display: none;
 }

@@ -1,8 +1,6 @@
 import "./Home.css";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-
-
 import Example from "./carousel";
 import Button from "@material-ui/core/Button";
 import Container from "@material-ui/core/Container"
@@ -96,6 +94,7 @@ const useStyles = makeStyles((theme) => ({
               </Button>
             </div>
             <div class="col-8 col-md-6">
+            {/* Example is the carousel, the code for which can be found in carousel.js */}
              <Example></Example>
             </div>
           </div>
