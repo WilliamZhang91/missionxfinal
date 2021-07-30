@@ -2,6 +2,8 @@ const express = require('express');
 const mysql = require('mysql2');
 const cors = require('cors')
 
+const port = 4000;
+
 const app = express();
 app.use(express.json())
 app.use(cors());
@@ -17,7 +19,7 @@ db.connect(function (err) {
     if (err) {
         console.log(err)
     } else {
-        console.log('connected to db')
+        console.log('connected to db' + port)
     }
 })
 
@@ -80,6 +82,7 @@ app.get('/project1', (req, res) => {
     })
 })
 
+<<<<<<< HEAD
 app.get('/user1', (req, res) => { //project completion status of user_id = 1
     db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "1"', (err, result) => {
         res.send(result)
@@ -148,6 +151,62 @@ app.get('/user14', (req, res) => { //project completion status of user_id = 14
         res.send(result)
     })
 })
+=======
+// login for students
+
+app.post("/logins", (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+  
+    db.query(
+      "SELECT * FROM user WHERE email = ? AND password = ?",
+      [email, password],
+      function (err, result) {
+        if (err) {
+          console.log(err);
+        } else {
+          if (result.length > 0) {
+            console.log("Check Successful");
+            res.sendStatus(200);
+          } else {
+            console.log("Check Unsuccessful");
+            res.sendStatus(401);
+          }
+        }
+      }
+    );
+  });
+
+// Update: changed login for teacher section so that it only works when someone with the role of teacher logs in
+
+  app.post("/login/teacher", (req, res) => {
+    const email = req.body.email;
+    const password = req.body.password;
+    const role = req.body.role;
+  
+    db.query(
+      "SELECT * FROM user WHERE email = ? AND password = ? AND role = 'teacher'",
+      [email, password, role],
+      function (err, result) {
+        if (err) {
+          console.log(err);
+        } else {
+          if (result.length > 0) {
+            console.log("Check Successful");
+            res.sendStatus(200);
+          } else {
+            console.log("Check Unsuccessful");
+            res.sendStatus(401);
+          }
+        }
+      }
+    );
+  });
+  
+>>>>>>> 1a84c68d8a4a59d7213e1b84f643c1d9379e48ac
 
 
-app.listen(4000)
+  app.listen(port, () => {
+    console.log("server  is running locally");
+  });
+  

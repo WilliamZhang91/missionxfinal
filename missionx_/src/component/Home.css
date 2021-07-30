@@ -1,0 +1,157 @@
+/* I only used one css styling page for all of the home and login/register page 
+because I reused bits of code from different sections. Also this meant i didn't 
+have to clutter up the components page with lots of different css files. I've 
+labelled the styles applied to different pages using comments.*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+h1,
+h2,
+h3 {
+  color: #756d6d;
+}
+/* Navbar */
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 10px 5px 0;
+}
+
+/* Hero section */
+
+.hero-container {
+  position: relative;
+  display: flex;
+  min-height: 250px;
+}
+
+.heroImg {
+  width: 99%;
+  height: 99%;
+  padding: 0%;
+}
+
+.heroTextContainer {
+  position: absolute;
+  top: 10%;
+  bottom: 20px;
+  left: 5%;
+  right: 50%;
+  color: #645f5f;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+}
+
+.heroTitle {
+  color: #756d6d;
+  font-weight: bold;
+  padding-bottom: 8px;
+}
+
+/* Section 2 */
+.section2-container {
+  position: relative;
+  display: flex;
+  min-height: 300px;
+}
+
+.twoimg {
+  width: 60%;
+  margin-top: 0;
+}
+
+.section2-text {
+  position: absolute;
+  top: 60px;
+  left: 5%;
+  right: 50%;
+  line-height: 1.5;
+  color: #756d6d;
+}
+
+.section2-p {
+  text-align: left;
+  font-size: 20px;;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  color: #685e5e;
+}
+
+/* Section 3 */
+.section3-container {
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: #f3efef;
+  justify-content: space-around;
+  align-items: center;
+}
+/* Skills section */
+.sk1 {
+  position: relative;
+  top: 0;
+  left: 0
+}
+
+.image1 {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 10px;
+}
+.image2 {
+  position: absolute;
+  top: 10%;
+  left: 33%;
+}
+/* resolved text not resizing using % instead of px */
+.skillsCaption {
+  position: absolute;
+  top: 60%;
+  left: 18%;
+  right: 18%;
+  font-size: 70%;    
+  font-weight: bolder;
+  text-shadow: -0.5px 0.5px 0 #000;
+  color: white;
+  text-align: center;
+  line-height: 1;
+}
+
+
+/* Button */
+.blue-button {
+  border-radius: 12px;
+  width: "140px";
+  height: "140px";
+  background: "#57BAEC";
+  text-align: "center";
+  margin: "3px";
+  color: "white";
+}
+
+/* Footer */
+.main-footer {
+  color: rgba(102, 102, 102, 0.87);
+  background-color: #a1dffa;
+  padding-top: 3em;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* Login Page to hide/reveal login and signup */
+.display-none {
+  display: none;
+}
