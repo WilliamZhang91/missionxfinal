@@ -17,6 +17,7 @@ var textContainer = {
 
 function Hero() {
   return (
+    // This container has the background color and some other styles
     <div className="section3-container">
     <Container>
   <Row>
@@ -27,6 +28,7 @@ function Hero() {
           Let us help you advance students in Digital Technologies and other
           learning areas with our project based learning programme.
         </p>
+        {/* Buttons are static and using material ui but the content is an img */}
           <Button >
             <img style={{width: "90%"}}
               src="Mission X Images\Home Page\CTA Button-6.png"

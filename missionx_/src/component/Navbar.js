@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Dialog from "@material-ui/core/Dialog";
 import LoginPage from "./LoginPage";
 
+// these styles at the top are done with styled components so will need
+// styled-components to be installed to work.
 const Nav = styled.nav`
   padding: 0 20px;
   height: 60px;
@@ -42,7 +44,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   padding: 0 50px 0 20px;
 `;
-
+// this is what is called on the login/register bit
 function LoginDialog(props) {
   const { onClose, selectedValue, open } = props;
 

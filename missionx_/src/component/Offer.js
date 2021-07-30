@@ -56,6 +56,7 @@ const useStyles = makeStyles((theme) => ({
               >
                 What will students create?
               </h3>
+              {/* used figure and gic caption toadd text to button */}
               <Button className={classes.button}>
                 <figure>
                   <img

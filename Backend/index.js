@@ -79,7 +79,7 @@ app.get('/project1', (req, res) => {
     })
 })
 
-// login for students
+// login for students 
 
 app.post("/logins", (req, res) => {
     const email = req.body.email;

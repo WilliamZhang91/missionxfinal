@@ -7,7 +7,7 @@ import axios from "axios";
 import "./Home.css";
 import { useHistory } from "react-router-dom";
 import Studentsection from "./studentsection";
-import Navbar from "./Navbar.js";
+
 
 const useStyles = makeStyles({
   card: {
@@ -29,15 +29,14 @@ const useStyles = makeStyles({
 
 export default function LoginPage(props) {
   const classes = useStyles();
-  //conditional render
+  
   const [loginArea, setLoginArea] = useState("true");
-  //backend
+
   const history = useHistory();
   const [users, setUsers] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [fullName, setFullName] = useState("");
-
   const [teacherEmail, setTeacherEmail] = useState("");
   const [teacherPassword, setTeacherPassword] = useState("");
 
