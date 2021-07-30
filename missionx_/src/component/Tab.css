@@ -84,13 +84,26 @@
 
 .rightArrowIcon {
     display: flex; 
-    justify-content: flex-end; 
+    justify-content: flex-start; 
     position: relative; 
-    top: '20vh';
+    top: '30vh';
 }
 
 .bottomIconGroup {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.settingsIcon {
+    width: 22px;
+    height: 22px;
+}
+
+.AvatarIcon {
+    width: 22px;
+    height: 22px;
 }
 
 .link {

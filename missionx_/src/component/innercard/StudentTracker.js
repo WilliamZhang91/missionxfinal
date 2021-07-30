@@ -1,6 +1,8 @@
 import './StudentTracker.css'
+import PictureAsPdf from '../icons/PdfIcon'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+
 
 export default function StudentTracker() {
 
@@ -122,7 +124,10 @@ export default function StudentTracker() {
 
             <div className='flexContainerStyle'>
                 <div className='beginnerCourse'>BEGINNER COURSE</div>
-                <div className='exportAsDefault'>EXPORT AS SPREADSHEET</div>
+                <div className="exportAsDefaultFlex">
+                    <PictureAsPdf />
+                    <div className='exportAsDefault'>EXPORT AS SPREADSHEET</div>
+                </div>
             </div>
 
 
@@ -197,6 +202,7 @@ export default function StudentTracker() {
 
                         {userFour.map(item => (
                             <div className='progressButton'>
+                                
                                 <button className='progressButtonIndividual'>{item.project_id}</button>
                             </div>
                         ))}
@@ -282,62 +288,7 @@ export default function StudentTracker() {
                 </div>
             </div>
 
-            <div className='progressTrackerCard'>
-                <div className='layoutOfItems'>
-                    <div className='status'>
 
-                        <div>
-                            <h4 className='user'>{countNumber.length > 0 && countNumber[8].user_name.toUpperCase()}</h4><br />
-                            {countNumber.length > 0 && <p className='projectsCompleted'>{countNumber[8].completed}/15 Projects Completed</p>}
-                        </div>
-
-                        {userEleven.map(item => (
-                            <div className='progressButton'>
-                                <button className='progressButtonIndividual'>{item.project_id}</button>
-                            </div>
-                        ))}
-
-                    </div>
-                </div>
-            </div>
-
-            <div className='progressTrackerCard'>
-                <div className='layoutOfItems'>
-                    <div className='status'>
-
-                        <div>
-                            <h4 className='user'>{countNumber.length > 0 && countNumber[9].user_name.toUpperCase()}</h4><br />
-                            {countNumber.length > 0 && <p className='projectsCompleted'>{countNumber[9].completed}/15 Projects Completed</p>}
-                        </div>
-
-                        {userThirteen.map(item => (
-                            <div className='progressButton'>
-                                <button className='progressButtonIndividual'>{item.project_id}</button>
-                            </div>
-                        ))}
-
-                    </div>
-                </div>
-            </div>      
-
-            <div className='progressTrackerCard'>
-                <div className='layoutOfItems'>
-                    <div className='status'>
-
-                        <div>
-                            <h4 className='user'>{countNumber.length > 0 && countNumber[10].user_name.toUpperCase()}</h4><br />
-                            {countNumber.length > 0 && <p className='projectsCompleted'>{countNumber[10].completed}/15 Projects Completed</p>}
-                        </div>
-
-                        {userFourteen.map(item => (
-                            <div className='progressButton'>
-                                <button className='progressButtonIndividual'>{item.project_id}</button>
-                            </div>
-                        ))}
-
-                    </div>
-                </div>
-            </div>
         </div>
     )
 }

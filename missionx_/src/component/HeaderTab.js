@@ -1,7 +1,7 @@
 import './HeaderTab.css'
 import Starlogo from './images/Starlogo.png'
 
-export default function Header() {
+export default function HeaderTab() {
 
     return (
         <div className='header'>

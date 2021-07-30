@@ -40,16 +40,42 @@
     border-bottom: 1px solid gray;
 }
 
-.flagNz {
-    padding: 0 3px;
+.flagNzProjects {
+    position: relative;
+    top: 8px;
+    left: 75px;
 }
 
-.flagMaori {
-    padding: 0 0 0 3px;
+.flagMaoriProjects {
+    position: relative;
+    top: 8px;
+    left: 80px;
+
 }
 
 .lang {
     font-size: 10px;
     display: flex;
-    align-content: flex-start;
+    position: relative;
+    right: -65px;
+    
+}
+
+.teacherName {
+    position:relative;
+    top: 13px;
+    right: 90px;
+    font-size: 18px;
+}
+
+.teacherProfilePic {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 30px;
+    right: 95px;
+}
+
+.teacherDetails {
+    display: flex;
 }

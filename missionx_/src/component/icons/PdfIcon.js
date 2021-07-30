@@ -1,12 +1,11 @@
-import SettingsIcon from '@material-ui/icons/Settings';
-import React from 'react';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 import { makeStyles } from '@material-ui/core/styles';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > svg': {
-            margin: theme.spacing(-13, 5),
+            margin: theme.spacing(-1, 1),
         },
     },
 }));
@@ -24,7 +23,7 @@ export default function SvgIconsColor() {
 
     return (
         <div className={classes.root}>
-            <SettingsIcon />
+            <PictureAsPdfIcon />
         </div>
     );
 }

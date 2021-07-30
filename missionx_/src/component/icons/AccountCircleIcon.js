@@ -6,7 +6,7 @@ import SvgIcon from '@material-ui/core/SvgIcon';
 const useStyles = makeStyles((theme) => ({
     root: {
       '& > svg': {
-        margin: theme.spacing(4),
+        margin: theme.spacing(-15, 5),
       },
     },
   }));

@@ -1,4 +1,11 @@
-.header {
+.headerTab {
     width: 100%;
+    display: flex;
+    margin: auto;
     background-color: white;
+    justify-content: space-between
+}
+
+.headerTabFlag {
+    display: flex
 }

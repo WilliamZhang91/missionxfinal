@@ -23,7 +23,12 @@
 }
 
 .exportAsDefault {
-    font-size: 17px;
+    display: flex;
+    font-size: 15px;
+}
+
+.exportAsDefaultFlex{
+    display: flex;
 }
 
 .progressTrackerCard {
@@ -49,6 +54,7 @@
 .status {
     margin: auto;
     display: flex;
+    justify-content: space-between
 }
 
 .user {
@@ -67,7 +73,6 @@
 .progressButton {
     display: flex;
     justify-content: flex-start;
-    flex-wrap: wrap;
     align-items: center;
 }
 

@@ -1,6 +1,6 @@
 import './Tab.css'
 import React, { useState } from 'react';
-import Header from './Header'
+import HeaderTab from './HeaderTab'
 import Button from './Button';
 import RightArrowIcon from './RightArrow';
 import LeftArrowIcon from './LeftArrow';
@@ -11,10 +11,14 @@ import ProjectSubmissionsIcon from './icons/ProjectSubmissionsIcon';
 import ProjectLibraryIcon from './icons/ProjectLibraryIcon';
 import AccountCircleIcon from './icons/AccountCircleIcon';
 import SettingsIcon from './icons/SettingsIcon';
+import HomeIcon from './icons/HomeIcon';
 import StudentProfiles from './innercard/StudentProfiles';
 import StudentTracker from './innercard/StudentTracker';
 import Ellipse from './images/Ellipse.png'
+import Settings from  './icons/Settings.png'
+import Avatar from './icons/Avatar.png'
 import { Link } from 'react-router-dom'
+import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
 
 
 export default function Tab() {
@@ -49,7 +53,7 @@ export default function Tab() {
     return (
 
         <div className="wholePage">
-            <Header />
+            <HeaderTab />
             <div style={{ display: 'flex' }}>
             <div className={isOpen ? "tab-active tab" : "tab"} >
                 <img className={'img'} src={Ellipse} alt="Ellipse.png" />
@@ -62,13 +66,16 @@ export default function Tab() {
                 </div>
 
                 <div>
-                    <div style={{ display: 'flex', justifyContent: 'flex-end', position: 'relative', top: '2vh', }}><span style={{ display: notDisplayed }} onClick={toggleDrawerClose}><LeftArrowIcon /></span></div>
-                    <div style={{ display: 'flex', justifyContent: 'flex-start', position: 'relative', top: '15vh', }}><span style={{ display: isDisplayed }} onClick={toggleDrawerOpen}><RightArrowIcon /></span></div>
+                    <div className="leftArrowIcon"><span style={{ display: notDisplayed }} onClick={toggleDrawerClose}><LeftArrowIcon /></span></div>
+                    <div style={{ display: 'flex', justifyContent: 'flex-start', position: 'relative', top: '10vh', }}><span style={{ display: isDisplayed }} onClick={toggleDrawerOpen}><RightArrowIcon /></span></div>
                 </div>
 
-                <div className={bottomIcons}>
+            <div className="bottomIconGroup">
+                <SettingsIcon />
+                <AccountCircleIcon />
+                <HomeIcon />
+            </div>
 
-                </div>
 
             </div>
 

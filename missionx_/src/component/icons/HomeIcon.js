@@ -1,17 +1,16 @@
-import SettingsIcon from '@material-ui/icons/Settings';
-import React from 'react';
+import HomeIcon from '@material-ui/icons/Home';
 import { makeStyles } from '@material-ui/core/styles';
 import SvgIcon from '@material-ui/core/SvgIcon';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         '& > svg': {
-            margin: theme.spacing(-13, 5),
+            margin: theme.spacing(-17, 5),
         },
     },
 }));
 
-function HomeIcon(props) {
+function returnHome(props) {
     return (
         <SvgIcon {...props}>
             <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
@@ -24,7 +23,7 @@ export default function SvgIconsColor() {
 
     return (
         <div className={classes.root}>
-            <SettingsIcon />
+            <HomeIcon />
         </div>
     );
 }

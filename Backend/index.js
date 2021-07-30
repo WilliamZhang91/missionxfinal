@@ -22,7 +22,8 @@ db.connect(function (err) {
 })
 
 app.get('/user', (req, res) => { // student profile 
-    db.query('SELECT * FROM user', (err, result) => {
+    db.query('SELECT * from user', (err, result) => {
+        //'SELECT * from user WHERE user_id != "16"'
         res.send(result)
     })
 })
@@ -38,6 +39,14 @@ app.get('/count', (req, res) => {
         res.send(result)
     })
 })
+
+app.get('/teacherprofilepic', (req, res) => {
+    db.query('SELECT profile_pic, user_name FROM mission_x.user WHERE user_id = 16;', (err, result) => {
+        res.send(result)
+    })
+})
+
+
 
 
 app.get('/projectscompleted', (req, res) => {
@@ -60,7 +69,7 @@ app.get('/project', (req, res) => {
 })
 
 app.get('/project1', (req, res) => {
-    db.query('SELECT * FROM project WHERE activity_type = "animation" AND subscription = "fnodree"', (err, result) =>{
+    db.query('SELECT * FROM project WHERE activity_type = "animation" AND subscription = "free"', (err, result) =>{
         res.send(result)
     })
 })
@@ -72,69 +81,69 @@ app.get('/project1', (req, res) => {
 })
 
 app.get('/user1', (req, res) => { //project completion status of user_id = 1
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "1"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "1"', (err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user2', (req, res) => { //project completion status of user_id = 2
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "2"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "2"', (err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user3', (req, res) => { //project completion status of user_id = 3
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "3"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "3"', (err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user4', (req, res) => { //project completion status of user_id = 4
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "4"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "4"', (err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user5', (req, res) => { //project completion status of user_id = 1
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "5"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "5"', (err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user6', (req, res) => { //project completion status of user_id = 1
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "6"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "6"', (err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user7', (req, res) => { //project completion status of user_id = 7
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "7"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "7"', (err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user10', (req, res) => { //project completion status of user_id = 10
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "10"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "10"', (err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user11', (req, res) => { //project completion status of user_id = 11
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "11"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "11"', (err, result) => {
         //'SELECT progress_history.project_id, user.user_name FROM progress_history JOIN user ON progress_history.user_id = user.user_id',(err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user13', (req, res) => { //project completion status of user_id = 1
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "13"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "13"', (err, result) => {
         //'SELECT progress_history.project_id, user.user_name FROM progress_history JOIN user ON progress_history.user_id = user.user_id',(err, result) => {
         res.send(result)
     })
 })
 
 app.get('/user14', (req, res) => { //project completion status of user_id = 14
-    db.query('SELECT user.user_id, progress_history.project_id, user.user_name FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE user.user_id = "14"', (err, result) => {
+    db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "14"', (err, result) => {
         //'SELECT progress_history.project_id, user.user_name FROM progress_history JOIN user ON progress_history.user_id = user.user_id',(err, result) => {
         res.send(result)
     })
