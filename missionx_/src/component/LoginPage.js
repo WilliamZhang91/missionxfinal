@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { ButtonGroup, TextField, Grid} from '@material-ui/core';
 import {useState, useEffect} from 'react';
 import axios from 'axios';
-import "../App.css";
+import "./Home.css";
 import { useHistory } from 'react-router-dom';
 import Studentsection from './studentsection';
 import Navbar from './Navbar.js'

@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "./Home.css";
 import Container from "@material-ui/core/Container";
 
 function Skills() {
@@ -54,7 +54,7 @@ function Skills() {
               />
               <p className="skillsCaption">Communication <br/> & Collboration </p>
             </div>
-            <div class="col-sm">
+            <div class="col-sm sk1">
               <img className="image1"
                 src="Mission X Images\Home Page\skills4.png"
                 alt="class"

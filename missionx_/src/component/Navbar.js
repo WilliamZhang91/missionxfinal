@@ -1,8 +1,7 @@
 import React from "react";
-import "../App.css";
+import "./Home.css";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import SimpleDialog from "./SimpleDialog";
 import Dialog from "@material-ui/core/Dialog";
 import LoginPage from "./LoginPage";
 

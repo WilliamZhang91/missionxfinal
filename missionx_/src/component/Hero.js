@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "./Home.css";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -17,33 +17,6 @@ var textContainer = {
 
 function Hero() {
   return (
-    // <Grid>
-    // <div className="hero-container">
-    //   <img
-    //     className="heroImg"
-    //     src="Mission X Images\Home Page\Hero image option 1 edit 2.png"
-    //     alt="hero"
-    //   />
-
-    //   <div className="heroTextContainer">
-    //     <h1 className="heroTitle">Prepare young minds for a better future.</h1>
-    //     <p>
-    //       Let us help you advance students in Digital Technologies and other
-    //       learning areas with our project based learning programme.
-    //     </p>
-
-    //     <div>
-    //       <Button>
-    //         <img
-    //           src="Mission X Images\Home Page\CTA Button-6.png"
-    //           alt="learn more"
-    //         />
-    //       </Button>
-
-    //     </div>
-    //   </div>
-    // </div>
-    // </Grid>
     <div className="section3-container">
     <Container>
   <Row>
