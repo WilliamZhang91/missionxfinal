@@ -42,7 +42,7 @@ const [teacherPassword, setTeacherPassword]= useState("");
 
 
 useEffect(() => {
-  axios.get("http://localhost:7000/logins")
+  axios.get("http://localhost:4000/logins")
     .then(response => {
       setUsers(response.data)
     })
@@ -60,14 +60,14 @@ useEffect(() => {
 
 
 const loginStudent = () => {
-    axios.post("http://localhost:7000/logins", {
+    axios.post("http://localhost:4000/logins", {
       "email": email,
       "password": password,
     })
       .then(response => {
         console.log(response.status)
         console.log("login successful")
-        history.push('/Login')
+        history.push('/projectspage')
       })
       .catch(err => {
         console.log(err)
@@ -76,7 +76,7 @@ const loginStudent = () => {
   
   }
   const handleSignup = () => {
-  axios.post("http://localhost:7000/addUser", {
+  axios.post("http://localhost:4000/addUser", {
    "email": email,
    "password": password,
    "name": fullName,
