@@ -9,12 +9,13 @@ function Skills() {
   return (
     <div>
     {/* Theoretically this is responsive code but might not work as expected since merged with other code on github */}
-    {/* Update this should was resolved with using % for the skill caption */}
+    {/* Update the text being unresponsive was resolved with using % for the skill caption */}
       <Container style={{ padding: "50px" }} maxWidth="lg">
         <h2 style={{textAlign:"center"}}>
           Teaching kids programming and digital skills is MORE than just writing
           code.
         </h2>
+        {/* React Bootstrap was used to make this section responsive. */}
         <div class="container" style={{ paddingTop: "20px" }}>
           <div class="row">
             <div class="col-sm sk1">
@@ -75,7 +76,7 @@ function Skills() {
             </div>
           </div>
         </div>
-        {/* Buttons */}
+        {/* Buttons to be done with conditional renering relating to section 3 */}
         <div style={{textAlign: "center", paddingTop: "30px"}}>
         <h2 style={{paddingBottom: "15px"}}>How our programmes help teachers and schools</h2>
         <Row>
