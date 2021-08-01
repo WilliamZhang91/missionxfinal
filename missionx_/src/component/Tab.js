@@ -71,9 +71,7 @@ export default function Tab() {
                 </div>
 
             <div className="bottomIconGroup">
-                <SettingsIcon />
-                <AccountCircleIcon />
-                <HomeIcon />
+
             </div>
 
 

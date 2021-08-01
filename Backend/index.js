@@ -82,7 +82,7 @@ app.get('/project1', (req, res) => {
     })
 })
 
-<<<<<<< HEAD
+//<<<<<<<// HEAD
 app.get('/user1', (req, res) => { //project completion status of user_id = 1
     db.query('SELECT user.user_name, user.user_id, progress_history.project_id, progress_history.date_completed FROM user JOIN progress_history ON progress_history.user_id = user.user_id WHERE progress_history.date_completed IS NOT NULL AND progress_history.user_id = "1"', (err, result) => {
         res.send(result)
@@ -151,7 +151,7 @@ app.get('/user14', (req, res) => { //project completion status of user_id = 14
         res.send(result)
     })
 })
-=======
+
 // login for students
 
 app.post("/logins", (req, res) => {
@@ -203,7 +203,7 @@ app.post("/logins", (req, res) => {
     );
   });
   
->>>>>>> 1a84c68d8a4a59d7213e1b84f643c1d9379e48ac
+//>>>>>>> 1a84c68d8a4a59d7213e1b84f643c1d9379e48ac
 
 
   app.listen(port, () => {
