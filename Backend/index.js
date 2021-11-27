@@ -9,10 +9,10 @@ app.use(express.json())
 app.use(cors());
 
 const db = mysql.createConnection({
-    host: 'missionxdb.c7cxqkjagnrx.ap-southeast-2.rds.amazonaws.com',
-    user: 'admin',
-    password: 'adminpassword',
-    database: "mission_x"
+    host: 'process.env.DATABASE',
+    user: 'process.env.USER',
+    password: 'process.env.PASSWORD',
+    database: "process.env.DATABASE"
 })
 
 db.connect(function (err) {
