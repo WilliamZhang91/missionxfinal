@@ -80,6 +80,7 @@ app.get('/project1', (req, res) => {
 })
 
 // login for students 
+// yet to add + id of whoever logs in to get a specific profile
 
 app.post("/logins", (req, res) => {
     const email = req.body.email;
@@ -133,6 +134,6 @@ app.post("/logins", (req, res) => {
 
 
   app.listen(port, () => {
-    console.log("server  is running locally");
+    console.log(`server  is running locally at ${port}`);
   });
   
